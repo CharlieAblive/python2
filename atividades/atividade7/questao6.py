@@ -4,6 +4,5 @@ quantTent = 0
 while chute != numeroSecreto:
     chute = int(input("Errado! Tente de novo: "))
     quantTent += 1
-    if chute == numeroSecreto:
-        print(f"Você acertou em {quantTent} tentativas.")
-        break
+
+print(f"Você acertou em {quantTent} tentativas.")
