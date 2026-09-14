@@ -24,12 +24,28 @@ while rodando == 's':
                         else:
                             opcao = input("Este funcionário não está na lista. Deseja tentar de novo? (s/n)")
         case '3':
-
+                while opcao == 's':
+                    funcionario = input("Adicione um funcionario à lista de demissão:")
+                    for i in listafuncionario:
+                        if i == funcionario:
+                            listademissao.append(funcionario)
+                            opcao = input("Deseja adicionar outro funcionário à lista? (s/n)")
+                        else:
+                            opcao = input("Este funcionário não está na lista. Deseja tentar de novo? (s/n)")
         case '4':        
+                while opcao == 's':
+                    funcionario = input("Adicione um funcionario à lista de promoção:")
+                    for i in listafuncionario:
+                        if i == funcionario:
+                            listapromocao.append(funcionario)
+                            opcao = input("Deseja adicionar outro funcionário à lista? (s/n)")
+                        else:
+                            opcao = input("Este funcionário não está na lista. Deseja tentar de novo? (s/n)")
 
         case '5':
-
+            break
         case _:
+            opcao = input("Opção inválida, tente novamente (apenas números): ")
 
 
 
