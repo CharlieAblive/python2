@@ -46,6 +46,8 @@ while rodando == 's':
             break
         case _:
             opcao = input("Opção inválida, tente novamente (apenas números): ")
-
+print(f"Lista de funcionários: {listafuncionario}")
+print(f"Lista de funcionários que serão demitidos {listademissao}")
+print(f"Lista de funcionários que serão promovidos {listapromocao}")
 
 
