@@ -19,7 +19,6 @@ class Pessoa:
         print(f"{self.nome} {self.defeito}.")
 
 
-
 #todas as pessoas mencionadas são meus amigos e todos consentiram a estar no meu código (para fins legais)    
 pessoa1 = Pessoa("Charlie",
                  12345678900,
