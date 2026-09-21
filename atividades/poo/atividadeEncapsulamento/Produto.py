@@ -7,43 +7,43 @@ class Produto:
 
     @property
     def nome(self):
-        return self.__nome
+        print(self.__nome) 
     @property
     def preco(self):
-        return self.__preco
+        print(self.__preco)
     @property
     def quant_estoque(self):
-        return self.__quant_estoque
+        print(self.__quant_estoque)
 
     @preco.setter
     def preco(self, novoPreco):
-        self.preco = novoPreco
+        self.__preco = novoPreco
 
     @quant_estoque.setter
     def quant_estoque(self, novaQuant):
-        self.quant_estoque = novaQuant
+        self.__quant_estoque = novaQuant
 
 
     def adicionarEstoque(self, quant):
         if quant > 0:
-            self.quant_estoque += quant
+            self.__quant_estoque += quant
         else:
             print("Erro: Quantidade não pode ser menor que 0.")
 
     def realizarVenda(self, quant):
-        if quant > 0 and quant <= self.quant_estoque:
-            self.quant_estoque -= quant
+        if quant > 0 and quant <= self.__quant_estoque:
+            self.__quant_estoque -= quant
         else:
             print("Erro: Estoque insuficiente.")
 
     def aplicarDesconto(self, desconto):
         if desconto <= 80 and desconto > 0:
-            self.preco = (self.preco * desconto)/100
+            self.__preco = (self.__preco * desconto)/100
         else:
             print("Erro: Desconto inválido.")
 
     def exibirStatus(self):
-        return f"Produto: {self.nome}\nPreço: {self.preco}\nEstoque: {self.quant_estoque}"
+        return f"Produto: {self.__nome}\nPreço: {self.__preco}\nEstoque: {self.__quant_estoque}"
     
 
 
@@ -52,7 +52,7 @@ produto1 = Produto("Teste", 5.0, 12)
 produto1.adicionarEstoque(int(input("Quantidade de produtos a serem adicionados: ")))
 produto1.realizarVenda(int(input("Quantidade de produtos a serem vendidos: ")))
 produto1.aplicarDesconto(int(input("Insira o valor de desconto: ")))
-produto1.exibirStatus()    
+print(produto1.exibirStatus())    
 
     
         
