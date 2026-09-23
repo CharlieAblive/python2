@@ -6,7 +6,7 @@ class Mamifero(Animal):
         super().__init__(nome, idade, nivelFome)
         
     def correr(self):
-        self.nivelFome(self.nivelFome - 20)
+        self.nivelFome = self.nivelFome + 20
         print(f"{self.nome} correu a {self.__velocidade}Km/h!")
 
     def emitirSom(self):
@@ -18,3 +18,4 @@ class Mamifero(Animal):
 if __name__ == "__main__":
     leao = Mamifero("simba", 3, 54, 70)
     leao.exibirResumo()
+    leao.correr()

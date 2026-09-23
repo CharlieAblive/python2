@@ -8,6 +8,7 @@ class Ave(Animal):
     def voar(self):
         if self.nivelFome <= 80:
             print(f"{self.nome} voa com suas asas de {self.__envergadura}cm.")
+            self.nivelFome = self.nivelFome + 15
         else:
             print(f"{self.nome} está faminto demais para voar.")
 
@@ -20,3 +21,4 @@ class Ave(Animal):
 if __name__ == "__main__":
     pombo = Ave("pruu", 3, 54, 70)
     pombo.exibirResumo()
+    pombo.voar()

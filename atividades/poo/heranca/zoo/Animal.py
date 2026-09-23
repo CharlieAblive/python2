@@ -31,13 +31,13 @@ class Animal:
     @nivelFome.setter
     def nivelFome(self, fomeNova):
         if fomeNova < 0:
-            self.__nivelFome == 0
+            self.__nivelFome = 0
             print("O animal está sem fome!")
         elif fomeNova > 100:
-            self.__nivelFome == 100
+            self.__nivelFome = 100
             print("O animal está faminto!")
         else:
-            self.__nivelFome == fomeNova
+            self.__nivelFome = fomeNova
 
     def alimentar(self, porcao):
         if porcao > 0:
